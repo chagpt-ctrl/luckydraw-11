@@ -122,10 +122,13 @@
         });
 
         function showPopup() {
-            // Always show img4 as the winner
-            const winningImage = document.getElementById('label4').querySelector('img').src;
+            // Get the image from label5
+            const winningImage = document.querySelector('#label5 img').src;
             document.getElementById('popupImage').src = winningImage;
-            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup').style.display = 'flex';
+            document.getElementById('popup').style.flexDirection = 'column';
+            document.getElementById('popup').style.alignItems = 'center';
+            document.getElementById('popup').style.justifyContent = 'center';
             document.getElementById('lightingEffect').style.display = 'block';
         }
 
@@ -149,3 +152,4 @@
 </body>
 
 </html>
+
